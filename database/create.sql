@@ -49,7 +49,7 @@ CREATE TABLE monthlyPay (
 
 CREATE TABLE specialPay (
     ID int NOT NULL AUTO_INCREMENT,
-    penaltyName varchar(16) NOT NULL,
+    playerID int NOT NULL,
     details varchar(128),
     price decimal(4,1) NOT NULL,
     happend date NOT NULL,
