@@ -5,8 +5,8 @@ CREATE TABLE players (
     firstname varchar(64) NOT NULL,
     lastname varchar(64) NOT NULL,
     nickname varchar(64),
-    activePay bit NOT NULL,
-    useNick bit NOT NULL,
+    activePay boolean NOT NULL,
+    useNick boolean NOT NULL,
     prepayed int NOT NULL,
     PRIMARY KEY (ID)
 );
