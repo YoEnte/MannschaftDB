@@ -1,9 +1,9 @@
 USE MannschaftDB;
 
-DROP TABLE receivesPenalty;
-DROP TABLE monthlyPay;
-DROP TABLE specialPay;
+DROP TABLE IF EXISTS receivesPenalty;
+DROP TABLE IF EXISTS monthlyPay;
+DROP TABLE IF EXISTS specialPay;
 
-DROP TABLE players;
-DROP TABLE penalties;
-DROP TABLE contributions;
+DROP TABLE IF EXISTS players;
+DROP TABLE IF EXISTS penalties;
+DROP TABLE IF EXISTS contributions;
