@@ -1,2 +1,3 @@
 database/baseInserts.sql
 database/advancedInserts.sql
+database/monthlyPayInserts.sql
