@@ -56,3 +56,11 @@ CREATE TABLE specialPay (
     PRIMARY KEY (ID),
     FOREIGN KEY (playerID) REFERENCES players(ID)
 );
+
+CREATE TABLE expenses (
+    ID int NOT NULL AUTO_INCREMENT,
+    details varchar(128),
+    price decimal(8,1) NOT NULL,
+    happend date NOT NULL,
+    PRIMARY KEY (ID)
+);

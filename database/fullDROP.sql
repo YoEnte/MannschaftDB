@@ -7,3 +7,4 @@ DROP TABLE IF EXISTS specialPay;
 DROP TABLE IF EXISTS players;
 DROP TABLE IF EXISTS penalties;
 DROP TABLE IF EXISTS contributions;
+DROP TABLE IF EXISTS expenses;
