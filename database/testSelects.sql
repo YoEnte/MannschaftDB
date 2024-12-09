@@ -24,7 +24,8 @@ AND ISNULL(mp.payed)
 ORDER BY p.ID;
 
 # Aufsummierte offene Monatsbeiträge -> NOT ISNULL() für bezahlte
-SELECT p.ID, p.firstname, SUM(c.price) as sum
+# + p.prepayed für prepayed zur summe
+SELECT p.ID, p.firstname, p.lastname, SUM(c.price) as sum
 FROM players p, monthlyPay mp, contributions c
 WHERE p.ID = mp.playerID AND c.ID = mp.contributionID
 AND ISNULL(mp.payed)
@@ -51,7 +52,7 @@ WHERE p.ID = rp.playerID
 AND pe.ID = rp.penaltyID
 GROUP BY p.ID, rp.penaltyID;
 
-# Aufsummierte offene Strafen -> NOT ISNULL() für bezahlte
+# Aufsummierte offene Strafen Kosten -> NOT ISNULL() für bezahlte
 SELECT p.ID, p.firstname, SUM(p2.price) as sum
 FROM players p, receivesPenalty rp, penalties p2
 WHERE p.ID = rp.playerID AND p2.ID = rp.penaltyID 
